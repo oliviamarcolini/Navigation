@@ -12,10 +12,23 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 Text("This is the root view 🌳")
-                NavigationLink(destination: SecondView()) {
-                   Text("Click me!")
-                }
+                    .toolbar {
+                        NavigationLink(destination: SecondView()) {
+                            Text("About")
+                                .foregroundColor(Color.purple)
+                        }
+                        NavigationLink(destination: ThirdView()) {
+                            Text("Sources")
+                                .foregroundColor(Color.purple)
+                        }
+                        NavigationLink(destination: FourthView()) {
+                            Text("Contact Us")
+                                .foregroundColor(Color.purple)
+                        }
+                    }
+                
             }
+            
         }
         
     }
