@@ -9,8 +9,17 @@ import SwiftUI
 
 struct SecondView: View {
     var body: some View {
-        Text("This is the second view!")
-    }
+        ZStack {
+            Color.yellow
+                .ignoresSafeArea()
+            VStack {
+                Text("This is the second view!")
+                Image("cat")
+                    .padding(7.0)
+                
+            }
+        }
+            }
 }
 
 #Preview {
